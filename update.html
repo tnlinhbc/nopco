@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CỤC THỐNG KÊ TỈNH TIỀN GIANG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- js -->
+    <script src="main2.js"></script>
+    <!-- js -->
+    <!-- header -->
+    <div class="header">
+        <div class="header__img">
+            <img src="./img/banner.jpg" alt="Cục thống kê">
+        </div>
+        <div class="header__menu">
+            <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="update.html">TIN TỨC</a>
+                    <ul class="header__menu--child">
+                        <li><a href="update.html">Tin tức trong nước</a></li>
+                        <li><a href="update.html">Tin tức ngoài nước</a></li>
+                        <li><a href="update.html">Tin tức giải trí</a></li>
+                    </ul>
+                </li>
+                <li><a href="update.html">THỐNG KÊ</a>
+                    <ul class="header__menu--child">
+                        <li><a href="update.html">Thống kê tuần</a></li>
+                        <li><a href="update.html">Thống kê tháng</a></li>
+                        <li><a href="update.html">Thống kê năm</a></li>
+                    </ul>
+                </li>
+                <li><a href="form.html">LIÊN HỆ</a></li>
+                <li><a href="qt.html">QUẢN TRỊ</a></li>
+            </ul>
+        </div>
+        <div class="header__wellcome">
+            <marquee behavior="" direction="left">
+                "CÁN BỘ, CÔNG CHỨC, NGƯỜI LAO ĐỘNG CỤC THỐNG KÊ TỈNH TIỀN GIANG SỐNG VÀ LÀM VIỆC THEO HIẾN PHÁP VÀ PHÁP
+                LUẬT"
+            </marquee>
+        </div>
+    </div>
+    <!-- header -->
+    <!-- content -->
+    <div class="content">
+        <!--content__left  -->
+        <div class="content_left">
+            <div class="content__left--menu">
+                <ul id="menudoc">
+                    <li><a href="update.html">Giới thiệu chung</a>
+                        <ul class="content__left--menuchild">
+                            <li><a href="update.html">Giới thiệu nhân viên</a></li>
+                            <li><a href="update.html">Giới thiệu sản phẩm</a></li>
+                            <li><a href="update.html">Giới thiệu cơ sở hạ tầng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="update.html">Tin tức - sự kiện</a>
+                        <ul class="content__left--menuchild">
+                            <li><a href="update.html">Tin tức trong ngày</a></li>
+                            <li><a href="update.html">Tin nổi bậc trong tháng</a></li>
+                            <li><a href="update.html">Tin nổi bậc trong năm</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="update.html">Thông tin thống kê</a></li>
+                    <li><a href="update.html">Phương án biểu mẫu điền</a></li>
+                    <li><a href="update.html">Niên giám thống kê</a></li>
+                    <li><a href="update.html">Công khai dự toán</a></li>
+                    <li><a href="update.html">Ấn phẩm thống kê</a></li>
+                    <li><a href="update.html">Pháp chế và tuyên truyền</a></li>
+                </ul>
+                <script language="javascript">
+                    var menu = document.querySelectorAll('#menudoc > li');
+                    for (var i = 0; i < menu.length; i++) {
+                        menu[i].addEventListener("click", function () {
+                            var menulist = document.querySelectorAll('#menudoc > li >ul');
+                            for (var j = 0; j < menulist.length; j++) {
+                                menulist[j].style.display = "none";
+                            }
+                            this.children[1].style.display = "block";
+                        });
+                    }
+                </script>
+            </div>
+            <div class="content_left__img">
+                <img src="./img/luatthongke.jpg" alt="">
+            </div>
+        </div>
+        <!-- content__left -->
+        <div class="content__right">
+            <div class="content__right--top"></div>
+            <div class="content__right--tt">
+                <h2>Trang đang bảo trì</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- content -->
+    <div class="footer">
+        <div class="footer__content">
+            <p><span>TRANG THÔNG TIN ĐIỆN TỬ CỤC THỐNG KÊ TỈNH TIỀN GIANG</span>
+                <br>
+                21 đường 30/4, phường 1, Thành phố Mỹ Tho, tinh Tiền Giang
+                <br>
+                ĐT: 0273. 3872582 - Fax: 0273. 3886 952 - Email:tiengiang@gso.gov.vn
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

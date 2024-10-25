@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CỤC THỐNG KÊ TỈNH TIỀN GIANG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- js -->
+    <script src="main.js"></script>
+    <!-- js -->
+    <!-- header -->
+    <div class="header">
+        <div class="header__img">
+            <img src="./img/banner.jpg" alt="Cục thống kê">
+        </div>
+        <div class="header__menu">
+            <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="update.html">TIN TỨC</a>
+                    <ul class="header__menu--child">
+                        <li><a href="update.html">Tin tức trong nước</a></li>
+                        <li><a href="update.html">Tin tức ngoài nước</a></li>
+                        <li><a href="update.html">Tin tức giải trí</a></li>
+                    </ul>
+                </li>
+                <li><a href="update.html">THỐNG KÊ</a>
+                    <ul class="header__menu--child">
+                        <li><a href="update.html">Thống kê tuần</a></li>
+                        <li><a href="update.html">Thống kê tháng</a></li>
+                        <li><a href="update.html">Thống kê năm</a></li>
+                    </ul>
+                </li>
+                <li><a href="./form.html">LIÊN HỆ</a></li>
+                <li><a href="qt.html">QUẢN TRỊ</a></li>
+            </ul>
+        </div>
+        <div class="header__wellcome">
+            <marquee behavior="" direction="left">
+                "CÁN BỘ, CÔNG CHỨC, NGƯỜI LAO ĐỘNG CỤC THỐNG KÊ TỈNH TIỀN GIANG SỐNG VÀ LÀM VIỆC THEO HIẾN PHÁP VÀ PHÁP
+                LUẬT"
+            </marquee>
+        </div>
+    </div>
+    <!-- header -->
+    <!-- content -->
+    <div class="content">
+        <!--content__left  -->
+        <div class="content_left">
+            <div class="content__left--menu">
+                <ul id="menudoc">
+                    <li><a href="">Giới thiệu chung</a>
+                        <ul class="content__left--menuchild">
+                            <li><a href="update.html">Giới thiệu nhân viên</a></li>
+                            <li><a href="update.html">Giới thiệu sản phẩm</a></li>
+                            <li><a href="update.html">Giới thiệu cơ sở hạ tầng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Tin tức - sự kiện</a>
+                        <ul class="content__left--menuchild">
+                            <li><a href="update.html">Tin tức trong ngày</a></li>
+                            <li><a href="update.html">Tin nổi bậc trong tháng</a></li>
+                            <li><a href="update.html">Tin nổi bậc trong năm</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="update.html">Thông tin thống kê</a></li>
+                    <li><a href="update.html">Phương án biểu mẫu điền</a></li>
+                    <li><a href="update.html">Niên giám thống kê</a></li>
+                    <li><a href="update.html">Công khai dự toán</a></li>
+                    <li><a href="update.html">Ấn phẩm thống kê</a></li>
+                    <li><a href="update.html">Pháp chế và tuyên truyền</a></li>
+                </ul>
+                <script language="javascript">
+                    var menu = document.querySelectorAll('#menudoc > li');
+                    for (var i = 0; i < menu.length; i++) {
+                        menu[i].addEventListener("click", function () {
+                            var menulist = document.querySelectorAll('#menudoc > li >ul');
+                            for (var j = 0; j < menulist.length; j++) {
+                                menulist[j].style.display = "none";
+                            }
+                            this.children[1].style.display = "block";
+                        });
+                    }
+                </script>
+            </div>
+
+            <div class="content_left__img">
+                <img src="./img/luatthongke.jpg" alt="">
+            </div>
+        </div>
+        <!-- content__left -->
+        <div class="content__right">
+            <div class="content__right--top"></div>
+            <div class="content__right--form">
+                <h2>Tạo thông tin của bạn</h2>
+                <form name="frDangKy">
+                    <table>
+                        <tr>
+                            <td class="from__title"><b>Tên đăng nhập</b></td>
+                            <td class="from__content"><input type="text" name="tenDangNhap"
+                                    placeholder="Nhập tên đăng nhập"></td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Tạo mật khẩu</b></td>
+                            <td class="from__content"><input type="password" name="matKhau" placeholder="Nhập mất khẩu">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Gõ lại mật khẩu</b></td>
+                            <td class="from__content"><input type="password" name="nhapLaiMatKhau"
+                                    placeholder="Nhập lại mật khẩu"></td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Địa chỉ email</b></td>
+                            <td class="from__content"><input type="email" placeholder="Nhập email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Họ và tên</b></td>
+                            <td class="from__content"><input type="text" name="hoTen" placeholder="Nhập họ tên"></td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Quốc gia</b></td>
+                            <td class=" form__conutry">
+                                <select name="quocGia">
+                                    <option value="chon" selected>Chọn quốc gia</option>
+                                    <option value="Việt Nam">Việt Nam</option>
+                                    <option value="Cu Ba">Cu Ba</option>
+                                    <option value="Nga">Nga</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Thành phố/Khu vực</b></td>
+                            <td class=" form__conutry">
+                                <select name="thanhPho">
+                                    <option value="chon" selected>Chọn thành phố</option>
+                                    <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                    <option value="Tân An">Tân An</option>
+                                    <option value="Đà Lạt">Đà Lạt</option>
+                                    <option value="Bình Dương">Bình Dương</option>
+                                    <option value="Kontum">Kontum</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Mã bưu chính</b></td>
+                            <td class="from__content"><input type="number" placeholder="Nhập mã bưu chính"
+                                    name="maBuuChinh"></td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Giới tính</b></td>
+                            <td class=" form__radio">
+                                <input type="radio" name="gioiTinh" value="Nam">Nam
+                                &nbsp;
+                                <input type="radio" name="gioiTinh" value="Nữ">Nữ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="from__title"><b>Năm sinh</b></td>
+                            <td class="from__content"><input type="number" placeholder="Ví dụ: 2004" name="namSinh">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0.3rem;">
+                                Bấm <b>tôi chấp nhận</b> nghĩ là bạn đồng ý với <span style="color: #04AA6D;">thoả
+                                    thuận</span>
+                                và <span style="color: #04AA6D;">điều
+                                    khoảng về quyền riêng tư</span> của Website
+                            </td>
+                        <tr>
+                            <td class="form__button" colspan="2">
+                                <input type="button" onclick="kiemTra()" value="Tôi chấp nhân">
+                            </td>
+                        </tr>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- content -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer__content">
+            <p><span>TRANG THÔNG TIN ĐIỆN TỬ CỤC THỐNG KÊ TỈNH TIỀN GIANG</span>
+                <br>
+                21 đường 30/4, phường 1, Thành phố Mỹ Tho, tinh Tiền Giang
+                <br>
+                ĐT: 0273. 3872582 - Fax: 0273. 3886 952 - Email:tiengiang@gso.gov.vn
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
